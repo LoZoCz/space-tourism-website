@@ -1,0 +1,179 @@
+@import url(https://fonts.bunny.net/css?family=alumni-sans:200,300,400,500,600|cinzel:400|roboto-condensed:300,400,700);
+
+$font-name-1: "Cinzel";
+$font-name-2: "Roboto Condensed";
+$font-name-3: "Alumni Sans";
+
+$prim-clr-1: #fefefe;
+$prim-clr-2: #232531;
+$prim-clr-3: #969aae;
+$prim-clr-4: #111016;
+$prim-clr-5: #feeccb;
+$prim-clr-6: #0b0c18;
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-name-3, system-ui, sans-serif;
+  background-image: url(public/home/background-home-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: $prim-clr-1;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: 12rem 1fr;
+  height: 100vh;
+}
+
+@mixin fl-spb-cen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-head {
+  @include fl-spb-cen;
+  padding: 2.5rem 0rem 2.5rem 3rem;
+
+  .options-list {
+    @include fl-spb-cen;
+    gap: 5rem;
+    background-color: transparent;
+    backdrop-filter: blur(6rem);
+    list-style: none;
+    margin: 0;
+    padding: 2.5rem 12rem;
+    border-radius: 3px;
+    font-size: 1.35rem;
+    font-weight: 300;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 75%;
+      height: 2px;
+      border-radius: 5rem;
+      background-color: $prim-clr-2;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -72.5%;
+    }
+
+    a {
+      color: $prim-clr-1;
+      text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2.5rem;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        border-radius: 5rem;
+        background-color: $prim-clr-1;
+        transition: width ease-in-out 200ms;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+      &[data-active="true"]::after {
+        width: 100%;
+      }
+
+      .option {
+        letter-spacing: 1px;
+
+        .option-number {
+          font-weight: 500;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.main-cont {
+  display: grid;
+  grid-template-columns: 90ch 1fr;
+  align-items: end;
+  padding: 0rem 8rem 6rem 8rem;
+  position: relative;
+
+  .text-wrapper {
+    & > * {
+      margin: 0;
+    }
+
+    .title-eyebrow {
+      font-size: 3rem;
+    }
+
+    .main-title {
+      font-size: 12rem;
+      font-family: $font-name-1;
+      font-weight: 100;
+    }
+
+    .main-desc {
+      width: 45ch;
+      font-size: 2rem;
+      color: $prim-clr-3;
+    }
+  }
+
+  .explore-btn {
+    background-color: $prim-clr-1;
+    color: $prim-clr-4;
+    justify-self: end;
+    width: 20rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    font-family: $font-name-1;
+    font-size: 3rem;
+    font-weight: 100;
+    border: none;
+    outline: none;
+    margin: 0 4rem 4rem 0;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 120%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      position: absolute;
+      outline: 2px dashed $prim-clr-5;
+      top: -10%;
+      left: -10%;
+      scale: 0.8;
+      transition: scale ease-in-out 300ms;
+    }
+
+    &:hover::after {
+      scale: 1;
+      animation: rotatingBorder infinite linear 20s;
+    }
+  }
+}
+
+@keyframes rotatingBorder {
+  to {
+    rotate: -360deg;
+  }
+}
