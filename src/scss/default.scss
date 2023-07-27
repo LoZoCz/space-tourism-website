@@ -1,4 +1,4 @@
-@import url(https://fonts.bunny.net/css?family=alumni-sans:200,300,400,500,600|cinzel:400|roboto-condensed:300,400,700);
+@import url('https://fonts.bunny.net/css?family=alumni-sans:200,300,400,500,600|cinzel:400|roboto-condensed:300,400,700');
 
 $font-name-1: "Cinzel";
 $font-name-2: "Roboto Condensed";
@@ -27,6 +27,11 @@ body {
   background: $prim-clr-2;
 }
 
+#root {
+  display: grid;
+  grid-template-rows: 12rem 1fr;
+  height: 100vh;
+}
 
 @mixin fl-spb-cen {
     display: flex;

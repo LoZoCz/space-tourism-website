@@ -1,13 +1,86 @@
 @import 'default.scss';
 
-#root {
-    display: grid;
-    grid-template-rows: 12rem 1fr;
-    height: 100vh;
-}
-
 #root:has(.dest-main-cont){
     background-image: url('../../public/destination/background-destination-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
+
+.dest-main-cont{
+    padding: 0rem 8rem 6rem 8rem;
+    font-weight: 200;
+
+    .dest-title{
+        font-size: 2rem;
+
+        .title-number{
+            font-weight: 700 !important;
+            margin-right: 1rem;
+            color: $prim-clr-3;
+        }
+    }
+
+    .planets-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .planet-img-wrapper{
+            display: grid;
+            place-items: center;
+        }
+
+        .planet-info-wrapper{
+            display: grid;
+            gap: 1rem;
+            font-size: 1.5rem;
+
+            .planets-list{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 3rem;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                margin-bottom: 1rem;
+
+                .planet-name{
+                    cursor: pointer;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -1rem;
+                        left: 0;
+                        width: 0%;
+                        height: 4px;
+                        border-radius: 5rem;
+                        background-color: $prim-clr-1;
+                        transition: width ease-in-out 200ms;
+                      }
+                
+                      &:hover::after {
+                        width: 100%;
+                      }
+                
+                      &[data-active="true"]::after {
+                        width: 100%;
+                      }
+                }
+            }
+
+            .planet-title{
+                font-size: 6rem;
+                margin: 0;
+                font-family: $font-name-1;
+            }
+
+            .planet-desc{
+                width: 45ch;
+                margin: 0;
+            }
+        }
+    }
+}
+

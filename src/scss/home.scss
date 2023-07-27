@@ -1,11 +1,5 @@
 @import 'default.scss';
 
-#root {
-  display: grid;
-  grid-template-rows: 12rem 1fr;
-  height: 100vh;
-}
-
 #root:has(.main-cont){
   background-image: url('../../public/home/background-home-desktop.jpg');
   background-repeat: no-repeat;
