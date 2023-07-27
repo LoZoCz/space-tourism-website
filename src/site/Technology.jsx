@@ -1,4 +1,10 @@
 import "../scss/technology.scss";
+import { Header } from "../components/Header";
 export const Technology = () => {
-  return <div>Technology</div>;
+  return (
+    <>
+    <Header/>
+    <h1>Technology</h1>
+    </>
+  );
 };

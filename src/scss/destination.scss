@@ -1,0 +1,13 @@
+@import 'default.scss';
+
+#root {
+    display: grid;
+    grid-template-rows: 12rem 1fr;
+    height: 100vh;
+}
+
+#root:has(.dest-main-cont){
+    background-image: url('../../public/destination/background-destination-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

@@ -1,4 +1,8 @@
 import "../scss/crew.scss";
+import { Header } from "../components/Header";
 export const Crew = () => {
-  return <div>Crew</div>;
+  return (<>
+    <Header />
+    <h1>Crew</h1>  
+  </>);
 };

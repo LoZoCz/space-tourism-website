@@ -1,33 +1,4 @@
-@import url(https://fonts.bunny.net/css?family=alumni-sans:200,300,400,500,600|cinzel:400|roboto-condensed:300,400,700);
-
-$font-name-1: "Cinzel";
-$font-name-2: "Roboto Condensed";
-$font-name-3: "Alumni Sans";
-
-$prim-clr-1: #fefefe;
-$prim-clr-2: #232531;
-$prim-clr-3: #969aae;
-$prim-clr-4: #111016;
-$prim-clr-5: #feeccb;
-$prim-clr-6: #0b0c18;
-
-* {
-  box-sizing: border-box;
-  font-family: inherit;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: $font-name-3, system-ui, sans-serif;
-  background-image: url(public/home/background-home-desktop.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  color: $prim-clr-1;
-}
+@import 'default.scss';
 
 #root {
   display: grid;
@@ -35,76 +6,10 @@ body {
   height: 100vh;
 }
 
-@mixin fl-spb-cen {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-head {
-  @include fl-spb-cen;
-  padding: 2.5rem 0rem 2.5rem 3rem;
-
-  .options-list {
-    @include fl-spb-cen;
-    gap: 5rem;
-    background-color: transparent;
-    backdrop-filter: blur(6rem);
-    list-style: none;
-    margin: 0;
-    padding: 2.5rem 12rem;
-    border-radius: 3px;
-    font-size: 1.35rem;
-    font-weight: 300;
-    position: relative;
-
-    &::after {
-      content: "";
-      width: 75%;
-      height: 2px;
-      border-radius: 5rem;
-      background-color: $prim-clr-2;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: -72.5%;
-    }
-
-    a {
-      color: $prim-clr-1;
-      text-decoration: none;
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -2.5rem;
-        left: 0;
-        width: 0%;
-        height: 4px;
-        border-radius: 5rem;
-        background-color: $prim-clr-1;
-        transition: width ease-in-out 200ms;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
-
-      &[data-active="true"]::after {
-        width: 100%;
-      }
-
-      .option {
-        letter-spacing: 1px;
-
-        .option-number {
-          font-weight: 500;
-          margin-right: 5px;
-        }
-      }
-    }
-  }
+#root:has(.main-cont){
+  background-image: url('../../public/home/background-home-desktop.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main-cont {
@@ -169,11 +74,5 @@ body {
       scale: 1;
       animation: rotatingBorder infinite linear 20s;
     }
-  }
-}
-
-@keyframes rotatingBorder {
-  to {
-    rotate: -360deg;
   }
 }

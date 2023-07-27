@@ -1,0 +1,41 @@
+@import url(https://fonts.bunny.net/css?family=alumni-sans:200,300,400,500,600|cinzel:400|roboto-condensed:300,400,700);
+
+$font-name-1: "Cinzel";
+$font-name-2: "Roboto Condensed";
+$font-name-3: "Alumni Sans";
+
+$prim-clr-1: #fefefe;
+$prim-clr-2: #232531;
+$prim-clr-3: #969aae;
+$prim-clr-4: #111016;
+$prim-clr-5: #feeccb;
+$prim-clr-6: #0b0c18;
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-name-3, system-ui, sans-serif;
+  color: $prim-clr-1;
+  background: $prim-clr-2;
+}
+
+
+@mixin fl-spb-cen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes rotatingBorder {
+  to {
+    rotate: -360deg;
+  }
+}
