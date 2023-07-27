@@ -27,6 +27,12 @@
         .planet-img-wrapper{
             display: grid;
             place-items: center;
+
+            img{
+                height: 100%;
+                aspect-ratio: 1;
+                display: block;
+            }
         }
 
         .planet-info-wrapper{
@@ -79,6 +85,53 @@
             .planet-desc{
                 width: 45ch;
                 margin: 0;
+                line-height: 2.1rem;
+            }
+
+            .additional-info{
+                display: flex;
+                gap: 6rem;
+                margin-top: 2rem;
+                position: relative;
+
+                &::after{
+                    content: "";
+                    width: 60%;
+                    height: 2px;
+                    border-radius: 5rem;
+                    background-color: $prim-clr-2;
+                    position: absolute;
+                    top: -1rem;
+                    left: 0;
+                }
+
+                .distance-info{
+                    font-family: $font-name-1;
+                    font-size: 2.25rem;
+                    margin: 0;
+
+                    &::before{
+                        content: "Avg. distance";
+                        font-family: $font-name-3;
+                        font-size: 1.25rem;
+                        font-weight: 100;
+                        display: block;
+                    }
+                }
+
+                .travel-info{
+                    font-family: $font-name-1;
+                    font-size: 2.25rem;
+                    margin: 0;
+
+                    &::before{
+                        content: "Est. travel time";
+                        font-family: $font-name-3;
+                        font-size: 1.25rem;
+                        font-weight: 100;
+                        display: block;
+                    }
+                }
             }
         }
     }
