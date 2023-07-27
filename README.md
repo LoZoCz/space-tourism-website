@@ -1,5 +1,6 @@
 # Space Tourism Website
 
-![](./screenshot.jpg)
+![](./screenshot1.png)
+![](./screenshot2.png)
 
 This is my site :D
