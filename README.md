@@ -1,6 +1,6 @@
 # Space Tourism Website
 
-This is my site :D
+Solution to Frontend Mentor Challange by myself :DD
 
 ![](./screenshot1.png)
 
