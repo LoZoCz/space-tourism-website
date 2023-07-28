@@ -1,19 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./site/Home";
-import { Destination } from "./site/Destination";
-import { Crew } from "./site/Crew";
-import { Technology } from "./site/Technology";
+import { BrowserRouter as Router } from "react-router-dom";
+import { AnimatedRoutes } from "./components/AnimatedRoutes";
+import "./scss/animations.scss";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/destination" element={<Destination />} />
-        <Route path="/crew" element={<Crew />} />
-        <Route path="/technology" element={<Technology />} />
-      </Routes>
-    </BrowserRouter>
+    <Router>
+      <AnimatedRoutes />
+    </Router>
   );
 }
 

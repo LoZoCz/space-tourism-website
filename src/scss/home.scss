@@ -19,18 +19,18 @@
     }
 
     .title-eyebrow {
-      font-size: 3rem;
+      font-size: clamp(2rem, 2.2vw, 3rem);
     }
 
     .main-title {
-      font-size: 12rem;
+      font-size: clamp(8rem, 10vw, 12rem);
       font-family: $font-name-1;
       font-weight: 100;
     }
 
     .main-desc {
       width: 45ch;
-      font-size: 2rem;
+      font-size: clamp(1.125rem, 2vw, 2rem);
       color: $prim-clr-3;
     }
   }
@@ -39,11 +39,11 @@
     background-color: $prim-clr-1;
     color: $prim-clr-4;
     justify-self: end;
-    width: 20rem;
+    width: clamp(15rem, 20vw, 20rem);
     aspect-ratio: 1;
     border-radius: 50%;
     font-family: $font-name-1;
-    font-size: 3rem;
+    font-size: clamp(1.75rem, 2.25vw, 3rem);
     font-weight: 100;
     border: none;
     outline: none;

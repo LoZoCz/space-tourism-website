@@ -10,7 +10,7 @@
     padding: 0rem 8rem;
 
     .crew-title{
-        font-size: 2rem;
+        font-size: clamp(1.25rem, 1.5vw, 2rem);
         text-transform: uppercase;
 
         .title-number{
@@ -24,7 +24,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: calc(100vh - 18rem);
-        gap: 3rem;
+        gap: 2rem;
 
         .crew-info-box{
             display: flex;
@@ -39,7 +39,7 @@
                 
                 .crew-eyebrow{
                     margin: 0;
-                    font-size: 2.25rem;
+                    font-size: clamp(0.9rem, 2vw, 2.25rem);
                     font-family: $font-name-1;
                     font-weight: 300;
                     color: $prim-clr-3;
@@ -47,14 +47,14 @@
 
                 .crew-name{
                     margin: 0;
-                    font-size: 4rem;
+                    font-size: clamp(1.5rem, 3vw, 4rem);
                     font-family: $font-name-1;
                     font-weight: 300;
                 }
 
                 .crew-desc{
                     width: 45ch;
-                    font-size: 1.5rem;
+                    font-size: clamp(0.75rem, 1.5vw, 1.5rem);
                     line-height: 1.6rem;
                     margin: 0;
                 }

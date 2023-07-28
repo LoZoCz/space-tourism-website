@@ -10,7 +10,7 @@
     padding: 0rem 0rem 0rem 8rem;
 
     .tech-title{
-        font-size: 2rem;
+        font-size: clamp(1.25rem, 1.5vw, 2rem);
         text-transform: uppercase;
 
         .title-number{
@@ -22,7 +22,7 @@
 
     .tech-wrapper{
         display: grid;
-        grid-template-columns: 6rem 1fr 1fr;
+        grid-template-columns: clamp(3rem, 5vw, 6rem) 1fr 1fr;
         align-items: center;
         gap: 6rem;
 
@@ -39,7 +39,7 @@
                 background-color: transparent;
                 outline: 1px solid $prim-clr-3;
                 color: $prim-clr-1;
-                font-size: 3rem;
+                font-size: clamp(1.7rem, 2vw , 3rem);
                 font-family: $font-name-1;
                 display: grid;
                 place-items: center;
@@ -64,19 +64,19 @@
             .tech-eyebrow{
                 margin: 0;
                 color: $prim-clr-3;
-                font-size: 2rem;
+                font-size: clamp(1.25rem, 1.5vw , 2rem);
                 text-transform: uppercase;
             }
 
             .tech-title{
                 font-family: $font-name-1;
-                font-size: 4rem;
+                font-size: clamp(2.25rem, 2.75vw , 4rem);
                 margin: 0;
             }
 
             .tech-desc{
                 width: 50ch;
-                font-size: 1.5rem;
+                font-size: clamp(0.9rem, 1.3vw , 1.5rem);
                 margin: 0;
                 line-height: 2rem;
             }
