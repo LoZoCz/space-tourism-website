@@ -25,11 +25,13 @@ body {
   font-family: $font-name-3, system-ui, sans-serif;
   color: $prim-clr-1;
   background: $prim-clr-2;
+  font-weight: 200;
+  overflow: hidden;
 }
 
 #root {
   display: grid;
-  grid-template-rows: 12rem 1fr;
+  grid-template-rows: 12rem calc(100vh - 12rem);
   height: 100vh;
 }
 

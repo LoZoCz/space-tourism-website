@@ -12,8 +12,7 @@ export const Destination = () => {
         <p className="dest-title"><span className="title-number">01</span> PICK YOUR DESTINATION</p>
         {Data.destinations.filter(item => item.id === activePlanet).map(item => {
           return (
-            <>
-              <section className="planets-wrapper">
+              <section className="planets-wrapper" key={item.id}>
                 <div className="planet-img-wrapper">
                   <img src={item.images.png} alt="planet image" className="planet-img"/>
                 </div>
@@ -33,7 +32,6 @@ export const Destination = () => {
                   </div>
                 </div>
               </section>
-            </>
           )
         })}
       </main>

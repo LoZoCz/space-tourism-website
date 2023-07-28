@@ -50,6 +50,9 @@
     margin: 0 4rem 4rem 0;
     cursor: pointer;
     position: relative;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
 
     &::after {
       content: "";

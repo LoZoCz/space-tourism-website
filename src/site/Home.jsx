@@ -1,5 +1,6 @@
 import "../scss/home.scss";
 import { Header } from "../components/Header";
+import { Link } from "react-router-dom";
 export const Home = () => {
   
   return (
@@ -16,7 +17,7 @@ export const Home = () => {
           this world experience!
         </p>
       </div>
-      <button className="explore-btn">EXPLORE</button>
+      <Link to='/destination' className="explore-btn">EXPLORE</Link>
     </main>
     </>
   );

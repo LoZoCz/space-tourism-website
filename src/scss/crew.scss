@@ -1,0 +1,100 @@
+@import 'default.scss';
+
+#root:has(.crew-main-cont){
+    background-image: url('../../public/crew/background-crew-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.crew-main-cont{
+    padding: 0rem 8rem;
+
+    .crew-title{
+        font-size: 2rem;
+
+        .title-number{
+            font-weight: 700 !important;
+            margin-right: 1rem;
+            color: $prim-clr-3;
+        }
+    }
+
+    .crew-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: calc(100vh - 18rem);
+        gap: 3rem;
+
+        .crew-info-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            gap: 6rem;
+            margin-bottom: 6rem;
+
+            .text-box{
+                display: grid;
+                gap: 1rem;
+                
+                .crew-eyebrow{
+                    margin: 0;
+                    font-size: 2.25rem;
+                    font-family: $font-name-1;
+                    font-weight: 300;
+                    color: $prim-clr-3;
+                }
+
+                .crew-name{
+                    margin: 0;
+                    font-size: 4rem;
+                    font-family: $font-name-1;
+                    font-weight: 300;
+                }
+
+                .crew-desc{
+                    width: 45ch;
+                    font-size: 1.5rem;
+                    line-height: 1.6rem;
+                    margin: 0;
+                }
+            }
+
+            .indicator-list{
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: repeat(4, 3rem);
+                place-items: center;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                .indicator{
+                    color: $prim-clr-3;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    transition: font-size ease-in-out 200ms;
+
+                    &:hover{
+                        font-size: 1.25rem;
+                    }
+
+                    &[data-active="true"]{
+                        font-size: 1.5rem;
+                        color: $prim-clr-1;
+                        transition: font-size ease-in-out 200ms;
+                    }
+                }
+            }
+        }
+
+        .crew-image-box{
+            display: flex;
+            justify-content: center;
+            
+            img{
+                display: block;
+                height: 100%;
+            }
+        }
+    }
+}
